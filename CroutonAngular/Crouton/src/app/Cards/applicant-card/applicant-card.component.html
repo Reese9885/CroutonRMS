@@ -1,0 +1,37 @@
+
+<mat-accordion multi="True">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-description class="MenuTitle">
+            <p>
+                <span class="Name">
+              {{applicant.firstName}}&nbsp;&nbsp;&nbsp;&nbsp;{{applicant.lastName}}
+                </span>
+                <span class="Job">
+                    {{applicant.position.title}}
+                </span>
+            </p>
+        </mat-panel-description>       
+      </mat-expansion-panel-header>
+      <div class="panel-content">
+        <p>Phone:{{applicant.phone}}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Notes: {{applicant.notes}}
+        </p>
+        <p>Email:{{applicant.email}}</p>
+        <p>Address:{{applicant.address}}<br>
+             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{applicant.city}} &nbsp;{{applicant.state}}</p>
+        <p>Hired:{{applicant.appliedDate}}
+            <mat-checkbox class="Save">Save</mat-checkbox>
+        <a  (click)="CallDelete(applicant.id)"  mat-fab color = "accent" class = "Delete" title="Delete!" >
+            <mat-icon >
+              delete
+            </mat-icon>
+        </a>
+        </p>
+
+
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion> 

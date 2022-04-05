@@ -1,0 +1,30 @@
+.Container{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    background-color: teal;
+    top:20%;
+}
+.MultiLines{
+    padding-left: 18%;
+    width: 100%;
+}
+.matInputField{
+    width: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+    transform: scale(150%); 
+}
+.Comments{
+    transform: scale(1.5);
+    width: 45%;
+    left:27.5%;
+    margin-top: 20px;
+
+
+}
+.Button{
+    margin-top: 10px;
+    width: 20%;
+    left:40%;
+}

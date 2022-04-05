@@ -1,0 +1,30 @@
+.mat-accordion {
+    display: block;
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-100vh); /* rotate and position it; translateX value corresponds to panel height */
+    width: 100vh; /* this will be the height of the accordion (inversed due to rotation) */
+    scroll-padding-top: 0;
+  }
+  
+  .mat-expansion-panel {
+    background-color: rgb(3, 124, 124);
+    max-height: 180px; /* this will be the width of the panel (inversed due to rotation), 3 is panel amount */
+  }
+  
+  .panel-content {
+    background-color: teal;
+    transform-origin: top left;
+    transform: rotate(90deg); /* rotate back */
+    margin-left: 100%; /* position it */
+    height: 100vw; /* real height of the content */
+    width: calc(100vw / 3 - 100px); /* real width of the content, 3 is panel amount */
+  }
+
+  .MenuTitle{
+      margin-left: 50%;
+  }
+
+  .Button{
+      margin-left: 17px;
+      margin-top: 10px ;
+  }

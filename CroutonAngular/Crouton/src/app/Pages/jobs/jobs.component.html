@@ -1,0 +1,43 @@
+<mat-card class="Card"> 
+    <div class="info">
+    Add new job title to the workplace :
+    </div>
+    <div class="jobFields">
+    <mat-form-field appearance="outline" class="matInputField1" >
+        <mat-label>Job Title</mat-label >
+            <input class="Input"  matInput placeholder="" (input)="SetTitle($any($event.target).value)" />
+      </mat-form-field>
+    
+      <mat-form-field appearance="outline" class="matInputField2" >
+        <mat-label>Starting Wage</mat-label >
+            <input class="Input"  matInput placeholder="$0.00"  (input)="SetWage($any($event.target).value)" />
+    
+      </mat-form-field>
+    
+      <a  (click)="CallPost()" mat-fab color = "accent" class = "jobPost" title="save" >
+        <mat-icon >
+        save
+        </mat-icon>
+    </a>
+    </div>
+    <div>
+        <label class="Error">{{errorMessage}}</label>
+    </div>
+    
+</mat-card>
+  <!--  <div *ngFor="let j of jobs" class="ShowCards">
+    <div class="Test">
+        <app-job-card [job] = "j" [id] = "j.id"></app-job-card>
+
+
+
+    </div>
+</div>
+-->
+<div class="MyCard" >
+        
+    <div  *ngFor= "let j of jobs" class="loop">
+        <app-job-card [job] = "j" [id] = "j.id"></app-job-card>
+    <div class="Space">&nbsp;</div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<p class="Title">Staff!</p>
+<div class="Card" >
+<div class="Loop" *ngFor="let emp of employees">
+<app-staff-card [employee] = "emp"></app-staff-card>
+<div class="Space">&nbsp;</div>
+</div>
+</div>
+
+<!-- <div class="MyCard" >
+        
+    <div  *ngFor= "let j of jobs" class="loop">
+        <app-job-card [job] = "j" [id] = "j.id"></app-job-card>
+    <div class="Space">&nbsp;</div>
+    </div>
+</div> -->

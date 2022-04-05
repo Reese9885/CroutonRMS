@@ -1,0 +1,52 @@
+.mat-accordion {
+    display: block;
+    transform-origin: top left;
+    width: 100vh; 
+    scroll-padding-top: 0;
+    /* transform: translateX(50%); */
+
+  }
+  
+  .mat-expansion-panel {
+    background-color: rgb(3, 124, 124);
+    max-height: 200px; /* this will be the width of the panel (inversed due to rotation), 3 is panel amount */
+  }
+  
+  .panel-content {
+    background-color: teal;
+    transform-origin: top left;
+    padding: 10px;
+    height: 100vw; /* real height of the content */
+  }
+  .Wage{
+    position: absolute;
+    margin-left: 0;
+    right: 10%;
+  }
+
+  .Name{
+      position:absolute;
+      margin-left: 0;
+      bottom: 30%;
+      
+  }
+  .Job{
+      position:absolute;
+      right:10%;
+      bottom: 30%;
+  }
+
+  .Button{
+      margin-right: 17px;
+      margin-top: 10px ;
+  }
+  .Update{
+      position: absolute;
+      bottom:5%;
+      right:15%;
+  }
+  .Delete{
+    position: absolute;
+    bottom:5%;
+    right:5%;
+}

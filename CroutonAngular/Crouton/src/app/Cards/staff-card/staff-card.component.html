@@ -1,0 +1,36 @@
+
+<mat-accordion multi="True">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-description class="MenuTitle">
+            <p>
+                <span class="Name">
+              {{employee.firstName}}&nbsp;&nbsp;&nbsp;&nbsp;{{employee.lastName}}
+                </span>
+                <span class="Job">
+                    {{employee.position.title}}
+                </span>
+            </p>
+        </mat-panel-description>       
+      </mat-expansion-panel-header>
+      <div class="panel-content">
+        <p>Phone:{{employee.phone}}<span class="Wage">Wage:{{employee.wage}}</span></p>
+        <p>Email:{{employee.email}}</p>
+        <p>Address:{{employee.address}}<br>{{employee.city}}{{employee.state}}</p>
+        <p>Hired:{{employee.hiredDate}}
+        <a routerLink="/Developing" (click)="OnClickUpdate(employee)"  mat-fab color = "accent" class = "Update" title="Update" >
+            <mat-icon >
+            update
+            </mat-icon>
+        </a>
+        <a routerLink="/Developing" (click)="CallDelete(employee.id)"  mat-fab color = "accent" class = "Delete" title="Fire!" >
+            <mat-icon >
+              whatshot
+            </mat-icon>
+        </a>
+        </p>
+
+
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion> 

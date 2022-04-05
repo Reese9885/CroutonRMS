@@ -1,0 +1,42 @@
+
+
+<body>
+    <div class="container" style="border: 2px;">
+       <mat-card>
+        <div class="appLogo">
+        </div>
+    
+        
+    
+        <div class="input">
+            <mat-form-field appearance="outline" class="matInputField" >
+                <mat-label>User</mat-label >
+                    <input  matInput placeholder="" (input)="SetUserName($any($event.target).value)" />
+              </mat-form-field>
+        </div>
+        <div class="input">
+            <mat-form-field appearance="outline" class="matInputField" >
+                <mat-label>Password</mat-label >
+                <input  matInput placeholder="" (input)="SetPassword($any($event.target).value)" />
+              </mat-form-field>
+        </div>
+    
+        <div class="button" >    
+            <a (click)="LogIn()"  mat-raised-button color = "accent" class=" m1-1">Log In</a>
+        </div>
+        <div>
+            {{errorMessage}}
+        </div>
+        <div class="Dev">
+            Development Use Only:
+            <div>
+                <a (click)="DevLogIn(1)"  mat-raised-button color = "accent" class=" m1-1">Admin</a>
+                <a (click)="DevLogIn(2)"  mat-raised-button color = "accent" class=" m1-1">Manager</a>
+                <a (click)="DevLogIn(3)"  mat-raised-button color = "accent" class=" m1-1">Employee</a>         
+            </div>
+        </div>
+    
+    
+    </mat-card>
+    </div>
+</body>

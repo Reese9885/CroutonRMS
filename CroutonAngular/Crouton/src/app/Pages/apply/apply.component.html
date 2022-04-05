@@ -1,0 +1,97 @@
+<div >
+    
+    <mat-card class="Container">
+    <div class="MultiLines">
+    <div class="NameLine">
+    
+        <!-- FIRST NAME -->
+        <mat-form-field appearance="outline" class="matInputField" >
+            <mat-label>First Name</mat-label >
+            <input  matInput placeholder="" (input)="UpdateFirstName($any($event.target).value)" />
+        </mat-form-field>
+    
+        <!-- LAST NAME -->
+        <mat-form-field appearance="outline" class="matInputField" >
+            <mat-label>Last Name</mat-label >
+            <input  matInput placeholder="" (input)="UpdateLastName($any($event.target).value)" />
+        </mat-form-field>
+    
+    </div>    
+    
+    <div class="ContactLine">
+    
+        <!-- PHONE -->
+        <mat-form-field appearance="outline" class="matInputField" >
+            <mat-label>Phone</mat-label >
+            <input  matInput placeholder="" (input)="UpdatePhone($any($event.target).value)" />
+            <!-- $any($event.target).value -->
+        </mat-form-field>
+    
+        <!-- EMAIL -->
+        <mat-form-field appearance="outline" class="matInputField" >
+            <mat-label>Email</mat-label >
+            <input  matInput placeholder="" (input)="UpdateEmail($any($event.target).value)" />
+            <!-- $any($event.target).value -->
+        </mat-form-field>
+        
+    </div>   
+    
+    <div class="AddressLine">
+    
+        <!-- ADDRESS -->
+        <mat-form-field appearance="outline" class="matInputField" >
+            <mat-label>Address</mat-label >
+            <input  matInput placeholder="" (input)="UpdateAddress($any($event.target).value)" />
+            <!-- $any($event.target).value -->
+        </mat-form-field>
+    
+        <!-- City -->
+        <mat-form-field appearance="outline" class="matInputField" >
+            <mat-label>City</mat-label >
+            <input  matInput placeholder="" (input)="UpdateCity($any($event.target).value)" />
+            <!-- $any($event.target).value -->
+        </mat-form-field>
+    </div>
+    <div>
+    
+        <!-- State -->
+        <mat-form-field appearance="outline" class="matInputField" >
+            <mat-label>State</mat-label >
+            <input  matInput placeholder="" (input)="UpdateState($any($event.target).value)" />
+            <!-- $any($event.target).value -->
+        </mat-form-field>
+           
+    
+       <mat-form-field appearance="fill" class="matInputField">
+            <mat-label>Position Wanted</mat-label> 
+            <mat-select >    
+                <span *ngFor="let job of jobs">
+                    <mat-option *ngIf="job.title!='Owner'"
+                    value="job.title">{{job.title}}
+                    </mat-option>
+                </span>   
+            </mat-select>
+          </mat-form-field>
+    </div>  
+    </div>
+        <!-- COMMENTS -->
+    <div class="CommentLine">
+        <mat-form-field class="Comments" appearance="fill">
+            <mat-label>Leave a comment</mat-label>
+            <textarea class="TestArea" matInput placeholder="Ex. Prior Work Experiance." 
+            (input)="UpdateNotes($any($event.target).value)"></textarea>
+          </mat-form-field>
+    </div>
+    
+    <a  
+                mat-raised-button color = "accent" class="Button" 
+                (click)="CallPut()">
+                Apply
+    </a>
+    
+    </mat-card>
+    
+    
+    
+    
+    

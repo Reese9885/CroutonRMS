@@ -1,0 +1,27 @@
+
+<mat-list-item>
+    <mat-card class="Card">
+    
+    <p class="Info"> 
+        <li>
+        <span class="Title">{{job.title}}</span>
+        <span class="Wage">{{job.startWage}}</span> 
+        </li>
+    </p>
+    
+    
+    
+    <a routerLink="/Developing" (click)="OnClickUpdate(id)"  mat-fab color = "accent" class = "Update" title="Update" >
+        <mat-icon >
+        update
+        </mat-icon>
+    </a>
+    <a routerLink="/Developing" (click)="CallDelete(id)"  mat-fab color = "accent" class = "Delete" title="Delete" >
+        <mat-icon >
+        delete
+        </mat-icon>
+    </a>
+    </mat-card>
+    </mat-list-item>
+    
+    

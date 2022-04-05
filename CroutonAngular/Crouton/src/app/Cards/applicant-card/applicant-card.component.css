@@ -1,0 +1,54 @@
+.mat-accordion {
+    display: block;
+    transform-origin: top left;
+    width: 100vh; 
+    scroll-padding-top: 0;
+
+  }
+  .Save{
+      position: absolute;
+      right:20%;
+      bottom: 12%;
+  }
+  .mat-expansion-panel {
+    background-color: rgb(3, 124, 124);
+    max-height: 220px; 
+  }
+  
+  .panel-content {
+    background-color: teal;
+    transform-origin: top left;
+    padding: 10px;
+  }
+  .Wage{
+    position: absolute;
+    margin-left: 0;
+    right: 10%;
+  }
+
+  .Name{
+      position:absolute;
+      margin-left: 0;
+      bottom: 30%;
+      
+  }
+  .Job{
+      position:absolute;
+      right:10%;
+      bottom: 30%;
+  }
+
+  .Button{
+      margin-right: 17px;
+      margin-top: 10px ;
+  }
+  .Update{
+      position: absolute;
+      bottom:5%;
+      right:15%;
+  }
+  .Delete{
+    position: absolute;
+    bottom:5%;
+    right:5%;
+}

@@ -1,0 +1,27 @@
+.Title{
+    position: absolute;
+    left: 45%;
+    top:13%;
+    font-size: xx-large;
+    font-weight: 500;
+    color: blueviolet;
+}
+.Card{
+    position:absolute;
+    left: 50%;
+    top:15%;   
+    transform: translateX(-50%) translateY(0);
+
+    
+    margin: auto;
+    margin-top: 1%;
+    width: 50%;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+.Space{
+    height: 4px;
+
+}

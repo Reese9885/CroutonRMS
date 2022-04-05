@@ -1,0 +1,72 @@
+
+  <mat-toolbar color= "primary" >
+    <div class="container">
+        <a routerLink="/" mat-fab color = "accent" class = "HomeIcon" title="">
+            <mat-icon >
+                home
+            </mat-icon>
+
+        </a>
+        <span *ngIf="loggedIn == true">
+        <!-- Displays whos currently logged in -->
+        <label class="UserName" *ngIf="client.position.title == 'Owner'" >
+            Admin:{{client.firstName}} {{client.lastName}}  </label>
+
+        <label class="UserName" *ngIf="client.position.title == 'Manager'" >
+            Manager:{{client.firstName}} {{client.lastName}}  </label>
+
+        <label class="UserName" *ngIf="client.position.title != 'Owner' && client.position.title != 'Manager' && client.position != null" >
+            Employee:{{client.firstName}} {{client.lastName}}  </label>
+        
+        <!-- Test Link DELETE xxx -->
+        <a  [routerLink]="['/Staffing',{sideBar:'sideBarStaffing'}]"mat-raised-button color = "accent" class="Button">Testing</a>
+
+        
+        <!-- Staffing Page  Visibilty:Admins/Managers -->
+        <a [routerLink]="[{ outlets: { primary: ['Staffing'],sideBar: ['Staffing'] } }]"
+             *ngIf="'client.client.isAdmin' || 'client.client.isManager'"  mat-raised-button color = "accent" class="Button">
+                Staffing</a>
+
+        <!-- Schedule Page  Visibilty:Everyone -->   
+        <a routerLink="/Schedule" 
+            mat-raised-button color = "accent" class="Button">Schedule</a>
+        
+        <!-- Customers Page  Visibilty:Everyone  -->
+        <!-- <a routerLink="/Customers"
+            mat-raised-button color = "accent" class="Button">Customers</a>
+         -->
+        <!-- Inventory Page  Visibilty:Admins/Managers -->
+        <!-- <a routerLink="/Inventory" 
+            *ngIf="'client.client.isAdmin' || 'client.client.isManager'"
+                 mat-raised-button color = "accent" class="Button">Inventory</a> -->
+        
+        <!-- Vendors Page  Visibilty:Admins/Managers -->
+        <!-- <a routerLink="/Vendors" 
+            *ngIf="'client.client.isAdmin' || 'client.client.isManager'"
+                 mat-raised-button color = "accent" class="Button">Vendors</a> -->
+
+        <!-- Settings Page  Visibilty:Admins/Managers -->
+        <a *ngIf="'client.client.isAdmin' || 'client.client.isManager'"
+        [routerLink]="[{ outlets: { primary: ['Settings'],sideBar: ['Settings'] } }]"
+                mat-fab color = "accent" class = "HomeIcon" title="">
+                <mat-icon >
+                settings
+                </mat-icon>
+        </a>
+
+        <!-- LogOut  Visibilty:Everyone -->
+        <a routerLink="/" (click)="clientService.ResetClientData()" mat-fab color = "accent" class = "SignOff" title="Sign Off" >
+            <mat-icon >
+                not_interested
+            </mat-icon>
+        </a>
+    </span> <!-- End of Post Log In-->
+        <a routerLink="/Developing" (click)="clientService.ResetClientData()" mat-fab color = "accent" class = "Dev" title="DevShortCut" >
+            <mat-icon >
+            link
+            </mat-icon>
+        </a>
+
+
+    </div>
+</mat-toolbar>
